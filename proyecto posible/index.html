@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Ropa</title>
+    <link rel="stylesheet" href="public/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="public\img\icono c.png" type="img\icono c.png">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Bienvenido a Nuestra Tienda de Ropa</h1>
+            <p>Encuentra las mejores prendas para tu estilo</p>
+        </div>
+        <nav class="navbar">
+            <a href="index.html">INICIO</a>
+            <a href="masculino.html">ROPA MASCULINA</a>
+            <a href="femenino.html">ROPA FEMENINA</a>
+            <a href="zapatillas.html">ZAPATILLAS</a>
+            <a href="contacto.html">CONTACTO</a>
+        </nav>
+
+<!--ELEMENTOS DEL FORMULARIO/control interactivo y envia info al servidor web-->
+<form action="/form-handler.php" method="post" target="_blank" onsubmit="return validateForm()"> 
+    <!--enviar formilacio/POST datos confidenciales,mas seguro.no muestra la info en la URL/
+    onsubmit="return validateForm (al enviar devolver validarFormulario)-->
+    <fieldset> 
+        <legend>Formulario de Registro</legend>
+        <label for="nombre">Nombre</label>
+        <!--autocomplete="off" evita q se completen los campos automaticamente-->
+        <input type="text" name="nombre" id="nombre" required autocomplete="off">
+        <label for="apellido">Apellido</label>
+        <input type="text" name="apellido" id="apellido" required autocomplete="off">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required autocomplete="off">
+        <label for="pass">Contraseña</label>
+        <input type="password" name="pass" id="pass" required autocomplete="off" 
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).{8,16}" title="Debe contener al menos un número, 
+        una letra mayúscula, una letra minúscula, un caracter especial y tener entre 8 y 16 caracteres.">
+        <label for="fecha">Fecha de Nacimiento</label>
+        <input type="date" name="fecha" id="fecha" required>
+        <input type="submit" value="Registrarse"  onclick="alert('Gracias por registrarse')"> <!--alerta para el usuario, 
+        quedo registrado o avisar que el msj llego a donde tenia que llegar-->
+        <input type="reset" value="Borrar">
+    </fieldset>
+</form>
+    <main>
+        <section class="productos">
+            <h2>Artículos Más Vendidos</h2>
+            <div class="producto">
+                <img src="public\img\mayorista\reme mayorista hombre.png">
+                <h3>Camiseta Blanca</h3>
+                <!--<p>$25.00</p>-->
+            </div>
+            <div class="producto">
+                <img src="public\img\mayorista\reme mujer mayorista.png" alt="Producto 2">
+                <h3>Jeans Azul</h3>
+                <!--<p>$40.00</p>-->
+           </div>   
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tienda de Ropa. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

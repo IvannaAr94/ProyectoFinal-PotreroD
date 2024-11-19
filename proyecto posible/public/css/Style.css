@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+header {
+   /* background-color: #a77a7a; */
+        text-align: center; 
+        padding: 0 0; 
+}
+
+.header-content { /*contenido del encabezado*/
+    background-image: url('C:/Users/Mamorcita/OneDrive/IVA cursos y capacitaciones/Programación WEB FRONT END- Backend Potrero Digital/proyecto posible/public/img/Purple & Black Retro.png'); 
+    background-size: cover; 
+    background-position: center; 
+   padding: 50px 20px; 
+    border-radius: 0px; 
+    color: rgb(251, 253, 251); 
+    text-align:center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #933d99;
+    padding: 3px 0;
+}
+
+.navbar a { /*barra de navegacion*/
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none; /*decoracion de texto:ninguna*/
+    font-weight: bold; /*peso de fuente: negrita*/
+    margin: 0 10px;
+}
+
+.navbar a:hover {
+    background-color: #c27ec7;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+/*ESTILO ROPA MASCULINA*/
+.productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /*espacio*/
+}
+
+.producto {
+    background-color: #dfb8d6;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /*caja sombra*/
+    text-align: center;
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+/*-----------------------------*/
+
+footer {
+    background-color: #933d99;;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    .productos {
+        flex-direction: column;
+        align-items: center; /*elementos de alineacion*/
+    }
+}
+
+/*ESTILO FORMULARIO*/
+form{
+    padding: 15px;
+    background-color: #ffccee;
+    border: 2px outset #5d2a42;
+    text-align: center;
+}
+
+label{
+    background-color: #ca389a; /*color fondo*/
+    color: #eee9ee;
+    padding: 5px; /*relleno*/
+    border-radius: 10px;
+}
+
+fieldset{  /*conjunto de campos*/
+    display: grid; /*visualizacion cuadricula*/
+    grid-template-columns: 30vw 20vw; /*columnas-plantilla-cuadricula: formulario 30 fondo color-20 parte blanca a llenar*/
+    gap: 10px; /*espacio*/
+    margin: auto;
+    width: fit-content; /*ancho-contenido ajustable*/
+    font-size: 1.2rem; /*tamaño fuente*/
+    border: 5px double #5d2a42;
+    font-weight: bold; /*peso de fuente: negrita;*/
+}
+
+/*LETRA EN NEGRITA-form de registro*/
+legend{
+    text-transform: uppercase; /*mayuscula*/
+    font-size: 1.1rem;
+    font-weight: bolder; /*mas audas*/
+}
+
+/*hace q cuando se achique no se rompa y se vea bien igual*/
+@media (max-width:600px) {
+    fieldset {  /*conjunto de campos*/
+        display: flex;  /*pantalla*/
+        flex-direction: column;  /*direccion flexible*/
+}
+}
+
+/*ESTILO CONTACTO*/
+.contacto { 
+        display: flex;
+        justify-content: center;
+        background-color: #933d99;
+        padding: 30px 0;
+    }
+    
+    .contacto a { /*barra de navegacion*/
+        color: #0a0a0a;
+        padding: 40px 40px;
+        text-decoration: none; /*decoracion de texto:ninguna*/
+        font-weight: bold; /*peso de fuente: negrita*/
+        margin: 0 10px;
+    }
+
+.contactosi{
+    padding: 15px;
+    background-color: #ca389a;
+    border: 2px outset #ddafd2; /*color de linea, borde
+    text-align: center;
+    border-radius: 10px;
+
+    /*LETRA EN NEGRITA-CONTACTO SI*/
+
+    text-transform: uppercase; /*mayuscula*/
+    font-size: 1rem;    /*1.1rem*/
+    font-weight: bold; /* Asegura que el texto este en negrita */
+    
+}
+
+.contactosi label{
+    background-color:transparent;  
+    padding: 5px; 
+    border-radius: 10px; 
+    font-weight: bold; /* Asegura que el texto este en negrita */ 
+    font-size: 1rem; /* Ajusta el tamaño de la fuente segun tus necesidades */ 
+   
+}
